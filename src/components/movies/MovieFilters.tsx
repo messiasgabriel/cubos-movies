@@ -12,9 +12,6 @@ interface MovieFiltersProps {
 export function MovieFilters({ filters, onFiltersChange, isExpanded }: MovieFiltersProps) {
     const { data: genres } = useGenres();
 
-    const currentYear = new Date().getFullYear();
-    const years = Array.from({ length: 50 }, (_, i) => currentYear - i);
-
     const handleFilterChange = (key: keyof MovieFiltersType, value: any) => {
         onFiltersChange({
         ...filters,
@@ -70,24 +67,26 @@ export function MovieFilters({ filters, onFiltersChange, isExpanded }: MovieFilt
             </select>
             </div>
 
-            {/* Ano */}
-            <div>
-            <label className="block text-sm font-medium text-muted-foreground mb-2">
-                Ano de lançamento
-            </label>
-            <select
-                value={filters.year || ''}
-                onChange={(e) => handleFilterChange('year', e.target.value ? Number(e.target.value) : undefined)}
-                className="w-full px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-            >
-                <option value="" className="bg-purple-7/80 backdrop-blur">Todos os anos</option>
-                {years.map(year => (
-                <option key={year} value={year} className="bg-purple-7/80 backdrop-blur">
-                    {year}
-                </option>
-                ))}
-            </select>
-            </div>
+                {/* Ano */}
+                <div>
+                    <label className="block text-sm font-medium text-muted-foreground mb-2">
+                        Ano de lançamento
+                    </label>
+                    <input
+                        min={1900}
+                        max={new Date().getFullYear()}
+                        placeholder="Digite o ano"
+                        value={filters.year ?? ''}
+                        onChange={(e) =>
+                            handleFilterChange(
+                                "year",
+                                e.target.value ? Number(e.target.value) : undefined
+                            )
+                        }
+                        className="w-full px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                </div>
+
                 {/* Gênero */}
                 <div>
                     <label className="block text-sm font-medium text-muted-foreground mb-2">
@@ -112,29 +111,25 @@ export function MovieFilters({ filters, onFiltersChange, isExpanded }: MovieFilt
                     <label className="block text-sm font-medium text-muted-foreground mb-2">
                         Avaliação
                     </label>
-                    <select
-                        value={filters.voteAverage?.max ?? ""}
+                    <input
+                        type="range"
+                        min="0"
+                        max="10"
+                        step="0.5"
+                        value={filters.voteAverage?.min || 0}
                         onChange={(e) =>
-                        handleFilterChange("voteAverage", {
-                            min: 0, 
-                            max: e.target.value ? Number(e.target.value) : undefined, 
+                        handleFilterChange('voteAverage', {
+                            min: Number(e.target.value),
+                            max: 10,
                         })
                         }
-                        className="w-full px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                        <option value="" className="bg-purple-7/80 backdrop-blur">
-                        Todas as avaliações
-                        </option>
-                        {Array.from({ length: 11 }, (_, i) => i * 1).map((value) => (
-                        <option 
-                            key={value} 
-                            value={value}
-                            className="bg-purple-7/80 backdrop-blur"
-                        >
-                            {value === 0 ? "0" : `${value}`} 
-                        </option>
-                        ))}
-                    </select>
+                        className="w-full"
+                    />
+                    <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                        <span>0</span>
+                            <span className="font-medium text-foreground">{filters.voteAverage?.min || 0}+</span>
+                        <span>10</span>
+                    </div>
                 </div>
             </div>
         </div>

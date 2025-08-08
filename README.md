@@ -4,7 +4,7 @@ Aplicação web responsiva para pesquisa e exibição de detalhes de filmes util
 Desenvolvido como desafio técnico para o processo seletivo da **Cubos**.
 
 ## 🚀 Demo
-[🔗 Acesse aqui](https://cubos-movies-aj0s80biy-gabriel-messias-projects-af855e57.vercel.app/)
+[🔗 Acesse aqui](https://cubos-movies-xi.vercel.app/)
 
 ## 📌 Funcionalidades
 - Pesquisa de filmes com resultados paginados.

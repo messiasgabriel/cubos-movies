@@ -24,7 +24,10 @@ Desenvolvido como desafio técnico para o processo seletivo da **Cubos**.
 - [Radix Colors](https://www.radix-ui.com/colors/docs/overview/installation)
 - [Lets Icon](https://www.figma.com/design/TKBIZengDI2kqu3Wh0VFSo/Free-Icon-Pack-1700--icons--Community)
 
-## 📦 Como executar
+## 📦 Dependências
+- instalar versão [TLS] do node (https://nodejs.org/api/tls.html)
+
+## ▶️  Como executar
 ```bash
 # Clonar o repositório
 git clone https://github.com/seu-usuario/seu-repositorio.git

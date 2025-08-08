@@ -100,13 +100,13 @@ export function MovieDetailsPage() {
     return (
         <div className="min-h-[calc(100vh-200px)] flex flex-col items-center">
             {/* Main Content Section */}
-            <div className="relative w-full max-w-7xl mx-auto mt-8 p-4 md:p-6">
+            <div className="relative rounded-sm w-full max-w-7xl mx-auto mt-8 p-4 md:p-6">
                 {/* Backdrop Image Background */}
                 <div className="hidden sm:block absolute inset-0 -z-10">
                     <img
                         src={backdropUrl}
                         alt={movie.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-xs"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background bg-mauve-1/50 to-transparent" />
                     <div className="absolute inset-0 bg-mauve-6/20" />

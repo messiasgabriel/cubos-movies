@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@import '@radix-ui/colors/gray.css';
+@import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/blue.css';
+@import '@radix-ui/colors/blue-dark.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/green-dark.css';
+@import '@radix-ui/colors/red.css';
+@import '@radix-ui/colors/red-dark.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/mauve-dark.css';
+@import '@radix-ui/colors/purple.css';
+@import '@radix-ui/colors/purple-dark.css';
+
+@theme {
+    /* Mauve Light */
+    --color-mauve-1: var(--mauve-1);
+    --color-mauve-2: var(--mauve-2);
+    --color-mauve-3: var(--mauve-3);
+    --color-mauve-4: var(--mauve-4);
+    --color-mauve-5: var(--mauve-5);
+    --color-mauve-6: var(--mauve-6);
+    --color-mauve-7: var(--mauve-7);
+    --color-mauve-8: var(--mauve-8);
+    --color-mauve-9: var(--mauve-9);
+    --color-mauve-10: var(--mauve-10);
+    --color-mauve-11: var(--mauve-11);
+    --color-mauve-12: var(--mauve-12);
+
+    /* Mauve Dark */
+    --color-mauve-dark-1: var(--mauve-dark-1);
+    --color-mauve-dark-2: var(--mauve-dark-2);
+    --color-mauve-dark-3: var(--mauve-dark-3);
+    --color-mauve-dark-4: var(--mauve-dark-4);
+    --color-mauve-dark-5: var(--mauve-dark-5);
+    --color-mauve-dark-6: var(--mauve-dark-6);
+    --color-mauve-dark-7: var(--mauve-dark-7);
+    --color-mauve-dark-8: var(--mauve-dark-8);
+    --color-mauve-dark-9: var(--mauve-dark-9);
+    --color-mauve-dark-10: var(--mauve-dark-10);
+    --color-mauve-dark-11: var(--mauve-dark-11);
+    --color-mauve-dark-12: var(--mauve-dark-12);
+
+    /* Purple Light */
+    --color-purple-1: var(--purple-1);
+    --color-purple-2: var(--purple-2);
+    --color-purple-3: var(--purple-3);
+    --color-purple-4: var(--purple-4);
+    --color-purple-5: var(--purple-5);
+    --color-purple-6: var(--purple-6);
+    --color-purple-7: var(--purple-7);
+    --color-purple-8: var(--purple-8);
+    --color-purple-9: var(--purple-9);
+    --color-purple-10: var(--purple-10);
+    --color-purple-11: var(--purple-11);
+    --color-purple-12: var(--purple-12);
+
+    /* Purple Dark */
+    --color-purple-dark-1: var(--purple-dark-1);
+    --color-purple-dark-2: var(--purple-dark-2);
+    --color-purple-dark-3: var(--purple-dark-3);
+    --color-purple-dark-4: var(--purple-dark-4);
+    --color-purple-dark-5: var(--purple-dark-5);
+    --color-purple-dark-6: var(--purple-dark-6);
+    --color-purple-dark-7: var(--purple-dark-7);
+    --color-purple-dark-8: var(--purple-dark-8);
+    --color-purple-dark-9: var(--purple-dark-9);
+    --color-purple-dark-10: var(--purple-dark-10);
+    --color-purple-dark-11: var(--purple-dark-11);
+    --color-purple-dark-12: var(--purple-dark-12);
+}
+
+.dark {
+    --background: var(--color-mauve-1);
+    --bg-purple: var(--color-purple-9);
+    --foreground: var(--gray-dark-12);
+    --card: var(--gray-dark-2);
+    --card-foreground: var(--gray-dark-12);
+    --primary: var(--color-green-500);
+    --primary-foreground: var(--gray-dark-1);
+    --secondary: var(--gray-dark-3);
+    --secondary-foreground: var(--gray-dark-11);
+    --muted: var(--gray-dark-4);
+    --muted-foreground: var(--gray-dark-10);
+    --accent: var(--blue-dark-4);
+    --accent-foreground: var(--blue-dark-11);
+    --border: var(--gray-dark-6);
+}
+.light{
+    --background: var(--color-purple-950);
+    --bg-purple: var(--color-purple-9);
+    --foreground: var(--gray-dark-12);
+    --card: var(--gray-dark-2);
+    --card-foreground: var(--gray-dark-12);
+    --primary: var(--color-green-500);
+    --primary-foreground: var(--gray-dark-1);
+    --secondary: var(--gray-dark-3);
+    --secondary-foreground: var(--gray-dark-11);
+    --muted: var(--gray-dark-4);
+    --muted-foreground: var(--gray-dark-10);
+    --accent: var(--blue-dark-4);
+    --accent-foreground: var(--blue-dark-11);
+    --border: var(--gray-dark-6);
+}
+
+body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--color-mauve-12);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+

@@ -14,29 +14,29 @@ export const tmdbApi = {
     // Buscar filmes populares ou por query
     searchMovies: async (query?: string, page = 1, filters?: MovieFilters): Promise<PaginatedResponse<Movie>> => {
         if (query && query.trim()) {
-        const response = await api.get<PaginatedResponse<Movie>>('/search/movie', {
-            params: { query, page },
-        });
-        return response.data;
+            const response = await api.get<PaginatedResponse<Movie>>('/search/movie', {
+                params: { query, page },
+            });
+            return response.data;
         }
 
         // Se não houver query, buscar filmes populares com filtros
         const params: any = {
-        page,
-        sort_by: filters?.sortBy || 'popularity.desc',
+            page,
+            sort_by: filters?.sortBy || 'popularity.desc',
         };
 
         if (filters?.year) {
-        params.primary_release_year = filters.year;
+            params.primary_release_year = filters.year;
         }
 
         if (filters?.genre) {
-        params.with_genres = filters.genre;
+            params.with_genres = filters.genre;
         }
 
         if (filters?.voteAverage) {
-        params['vote_average.gte'] = filters.voteAverage.min;
-        params['vote_average.lte'] = filters.voteAverage.max;
+            params['vote_average.lte'] = filters.voteAverage.max;
+            params['vote_average.gte'] = filters.voteAverage.min;
         }
 
         const response = await api.get<PaginatedResponse<Movie>>('/discover/movie', { params });

@@ -58,7 +58,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
                     </button>
                     {startPage > 2 && 
                         <span 
-                            className="text-muted-foreground px-3 py-2 rounded-xs transition-colors duration-200 bg-purple-7/80 hover:bg-accent text-mauve-12 cursor-not-allowed"
+                            className="text-muted-foreground px-3 py-2 rounded-xs transition-colors duration-200 bg-purple-7/80 hover:bg-accent text-mauve-12 cursor-not-allowed hidden sm:block"
                         >
                             ...
                         </span>

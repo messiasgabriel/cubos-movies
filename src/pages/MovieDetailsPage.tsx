@@ -112,10 +112,10 @@ export function MovieDetailsPage() {
                     <div className="absolute inset-0 bg-mauve-6/20" />
                 </div>
 
-                <div className="gap-6 flex flex-col md:grid md:grid-cols-[1fr_3fr]">
+                <div className="gap-6 flex flex-col lg:grid lg:grid-cols-[1fr_3fr]">
                 
                     {/* COLUNA 1 - Apenas Poster */}
-                    <div className="flex flex-col justify-center lg:justify-start">
+                    <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
                         <img
                         src={posterUrl}
                         alt={movie.title}

@@ -29,7 +29,7 @@ export function HomePage() {
     return (
         <div className="min-h-[calc(100vh-200px)] flex flex-col items-center">
             {/* Hero Section */}
-            <div className="relative p-6 bg-gradient-to-b from-accent to-background">
+            <div className="relative p-3 lg:p-6 bg-gradient-to-b from-accent to-background">
                 <div className="relative flex flex-row mx-auto text-center gap-2.5">
                     <SearchInput 
                         value={searchQuery}

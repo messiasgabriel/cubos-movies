@@ -8,7 +8,7 @@ export function SearchInput({ value, onChange, placeholder = "Pesquisar filmes..
             value={value}
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder}
-            className="w-[317px] md:w-[488px] px-4 py-3 pr-12 bg-card text-mauve-12 placeholder-mauve-10 rounded-lg border border-border border-mauve-7 focus:outline-none focus:ring-2 focus:ring-purple-7 focus:border-transparent transition-all duration-200 backdrop-blur bg-mauve-2"
+            className="w-[280px] sm:w-[300px] md:w-[488px] px-4 py-3 pr-12 bg-card text-mauve-12 placeholder-mauve-10 rounded-lg border border-border border-mauve-7 focus:outline-none focus:ring-2 focus:ring-purple-7 focus:border-transparent transition-all duration-200 backdrop-blur bg-mauve-2"
         />
             <svg 
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-mauve-12"

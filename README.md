@@ -1,7 +1,6 @@
 # 🎬 Cubos Movies
 
 Aplicação web responsiva para pesquisa e exibição de detalhes de filmes utilizando a API do [TMDB](https://developer.themoviedb.org/).  
-Desenvolvido como desafio técnico para o processo seletivo da [Cubos](https://cubos.io/).
 
 ## 🚀 Demo
 [🔗 Acesse aqui](https://cubos-movies-xi.vercel.app/)
